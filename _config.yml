@@ -1,0 +1,11 @@
+# GitHub Pages Configuration
+title: AI Voice Notes - 智能语音转文字助手
+description: AI录音笔记是您的智能语音助手，让录音转文字变得简单高效。支持会议记录、课堂笔记、灵感捕捉等多种场景。
+theme: null
+baseurl: "/recording"
+url: "https://weiproduct.github.io"
+
+# Build settings
+markdown: kramdown
+plugins:
+  - jekyll-seo-tag
