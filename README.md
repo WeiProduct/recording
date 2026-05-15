@@ -1,47 +1,26 @@
-# AI Voice Notes - Official Website
+# AI Voice Notes Website
 
-Official promotional website for AI Voice Notes (AI录音笔记) - an intelligent voice-to-text iOS application.
+Static product website for AI Voice Notes by WeiProduct.
 
-## 🌐 Live Site
+Live site: https://weiproduct.github.io/recording/
 
-Visit: [https://weiproduct.github.io/recording/](https://weiproduct.github.io/recording/)
+## Product Positioning
 
-## 📱 About the App
+AI Voice Notes helps users record, import, transcribe, and organize spoken information into searchable notes. The website is intentionally lightweight and deploys directly through GitHub Pages.
 
-AI Voice Notes is a smart voice assistant that makes audio-to-text conversion simple and efficient. Perfect for:
-- Meeting minutes
-- Class notes  
-- Idea capture
-- Interview transcription
-- Audio learning materials
+## Pages
 
-### Key Features
-
-- 🎙️ High-quality recording with background support
-- 🤖 Dual AI transcription engines (Apple Speech & OpenAI Whisper)
-- 📁 Audio file import and batch processing
-- 📝 Smart note management with search and tags
-- 🌍 Multi-language support (Chinese, English, Japanese)
-- 📺 YouTube subtitle extraction
-
-## 🛠️ Website Technology Stack
-
-- HTML5
-- CSS3 (with modern animations and responsive design)
-- Vanilla JavaScript
-- GitHub Pages hosting
-
-## 📄 Pages
-
-- `index.html` - Main landing page
+- `index.html` - Main product page
 - `privacy.html` - Privacy policy
-- `terms.html` - Terms of service  
+- `terms.html` - Terms
 - `support.html` - Support and contact
 
-## 🚀 Deployment
+## Verification
 
-The website is automatically deployed to GitHub Pages when changes are pushed to the main branch.
+Run a JavaScript syntax check before deployment:
 
-## 📝 License
+```sh
+node --check js/main.js
+```
 
-© 2025 AI Voice Notes. All rights reserved.
+GitHub Pages deploys from the `main` branch root.

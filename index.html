@@ -3,250 +3,245 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI录音笔记 - 智能语音转文字助手</title>
-    <meta name="description" content="AI录音笔记是您的智能语音助手，让录音转文字变得简单高效。支持会议记录、课堂笔记、灵感捕捉等多种场景。">
-    <meta property="og:title" content="AI录音笔记 - 智能语音转文字助手">
-    <meta property="og:description" content="高质量录音，AI智能转写，支持多语言，让每一个声音都变成有价值的文字">
-    <meta property="og:image" content="images/screenshot1.png">
+    <title>AI Voice Notes - WeiProduct</title>
+    <meta name="description" content="AI Voice Notes is a WeiProduct app for recording, importing, transcribing, and organizing spoken information into useful notes.">
+    <meta name="theme-color" content="#1769ff">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="WeiProduct">
+    <meta property="og:title" content="AI Voice Notes - WeiProduct">
+    <meta property="og:description" content="Record conversations, transcribe audio, import files, and organize voice-based notes.">
+    <meta property="og:url" content="https://weiproduct.github.io/recording/">
+    <meta property="og:image" content="https://weiproduct.github.io/recording/images/ai-voice-notes.png">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="AI Voice Notes - WeiProduct">
+    <meta name="twitter:description" content="Voice capture, transcription, and note organization by WeiProduct.">
+    <link rel="canonical" href="https://weiproduct.github.io/recording/">
+    <link rel="icon" href="images/ai-voice-notes.png" type="image/png">
+    <link rel="apple-touch-icon" href="images/ai-voice-notes.png">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "AI Voice Notes",
+        "applicationCategory": "ProductivityApplication",
+        "operatingSystem": "iOS",
+        "url": "https://weiproduct.github.io/recording/",
+        "image": "https://weiproduct.github.io/recording/images/ai-voice-notes.png",
+        "description": "AI-assisted voice recording, transcription, import, and note organization for meetings, study, interviews, and daily capture.",
+        "creator": {
+            "@type": "Organization",
+            "name": "WeiProduct",
+            "url": "https://weiproduct.com"
+        },
+        "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+        }
+    }
+    </script>
 </head>
 <body>
-    <!-- Navigation -->
-    <nav class="navbar">
-        <div class="container">
-            <div class="nav-brand">
-                <div class="app-icon">🎙️</div>
-                <span class="app-name">AI录音笔记</span>
+    <nav class="navbar" aria-label="Primary navigation">
+        <div class="container nav-shell">
+            <a class="brand" href="#top" aria-label="AI Voice Notes home">
+                <img src="images/ai-voice-notes.png" alt="" width="36" height="36">
+                <span>AI Voice Notes</span>
+            </a>
+            <div class="nav-menu" id="nav-menu">
+                <a href="#capabilities">Capabilities</a>
+                <a href="#screenshots">Product</a>
+                <a href="#workflow">Workflow</a>
+                <a href="#support" class="nav-cta">Support</a>
             </div>
-            <ul class="nav-menu">
-                <li><a href="#features">功能特色</a></li>
-                <li><a href="#screenshots">应用截图</a></li>
-                <li><a href="#use-cases">使用场景</a></li>
-                <li><a href="#download" class="btn-download-nav">立即下载</a></li>
-            </ul>
-            <div class="hamburger">
+            <button class="nav-toggle" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="nav-menu">
                 <span></span>
                 <span></span>
                 <span></span>
-            </div>
+            </button>
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="container">
-            <div class="hero-content">
-                <div class="hero-text">
-                    <h1 class="hero-title">
-                        让每一个声音<br>
-                        都变成<span class="highlight">有价值的文字</span>
-                    </h1>
+    <main id="top">
+        <section class="hero">
+            <div class="container hero-grid">
+                <div class="hero-copy reveal">
+                    <p class="eyebrow">WeiProduct voice productivity</p>
+                    <h1>Turn spoken information into organized notes.</h1>
                     <p class="hero-subtitle">
-                        AI录音笔记是您的智能语音助手，支持高质量录音、AI智能转写、多语言识别，让会议记录、学习笔记、灵感捕捉变得简单高效。
+                        AI Voice Notes helps users record conversations, import audio, transcribe speech, and keep the resulting text searchable. It is built for meetings, study, interviews, and fast idea capture.
                     </p>
-                    <div class="hero-buttons">
-                        <a href="#download" class="btn btn-primary">
-                            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M8 2a5.53 5.53 0 0 0-3.594 1.342c-.766.66-1.321 1.52-1.464 2.383C1.266 6.095 0 7.555 0 9.318 0 11.366 1.708 13 3.781 13h8.906C14.502 13 16 11.57 16 9.773c0-1.636-1.242-2.969-2.834-3.194C12.923 3.999 10.69 2 8 2z"/>
-                                <path d="M8 11l-4 4m4-4l4 4m-4-4V3"/>
-                            </svg>
-                            App Store 下载
-                        </a>
-                        <a href="#features" class="btn btn-secondary">了解更多</a>
+                    <div class="hero-actions">
+                        <a href="#screenshots" class="btn btn-primary">View product flow</a>
+                        <a href="#support" class="btn btn-secondary">Contact support</a>
                     </div>
-                    <div class="hero-stats">
-                        <div class="stat">
-                            <div class="stat-number">10万+</div>
-                            <div class="stat-label">活跃用户</div>
-                        </div>
-                        <div class="stat">
-                            <div class="stat-number">4.8⭐</div>
-                            <div class="stat-label">用户评分</div>
-                        </div>
-                        <div class="stat">
-                            <div class="stat-number">99%</div>
-                            <div class="stat-label">识别准确率</div>
-                        </div>
+                    <div class="capability-strip" aria-label="Product capability summary">
+                        <span>Record</span>
+                        <span>Transcribe</span>
+                        <span>Organize</span>
                     </div>
                 </div>
-                <div class="hero-image">
-                    <div class="phone-mockup">
-                        <img src="images/screenshot2.png" alt="AI录音笔记主界面" class="screenshot-main">
+                <div class="hero-device reveal">
+                    <div class="device-frame">
+                        <img src="images/screenshot2.png" alt="AI Voice Notes recording screen">
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Features Section -->
-    <section id="features" class="features">
-        <div class="container">
-            <h2 class="section-title">核心功能</h2>
-            <p class="section-subtitle">强大的功能，简单的操作</p>
-            <div class="features-grid">
-                <div class="feature-card">
-                    <div class="feature-icon">🎙️</div>
-                    <h3>智能录音</h3>
-                    <p>高质量录音，支持后台录制，自动保存，永不丢失重要内容</p>
+        <section id="capabilities" class="section capabilities">
+            <div class="container">
+                <div class="section-heading reveal">
+                    <p class="eyebrow">Capabilities</p>
+                    <h2>A practical voice-to-note workflow.</h2>
+                    <p>Instead of selling abstract AI, the product focuses on the recurring user job: capture audio, convert it to text, and keep the result useful.</p>
                 </div>
-                <div class="feature-card">
-                    <div class="feature-icon">🤖</div>
-                    <h3>AI转写引擎</h3>
-                    <p>双引擎选择：Apple本地识别保护隐私，OpenAI Whisper提供高精度</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">📁</div>
-                    <h3>音频导入</h3>
-                    <p>支持导入现有音频文件，批量处理，自动转写成文字笔记</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">📝</div>
-                    <h3>智能笔记</h3>
-                    <p>支持手写笔记，全文搜索，标签分类，让知识管理更高效</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">🌍</div>
-                    <h3>多语言支持</h3>
-                    <p>界面支持中英文，转写支持中文、英文、日文等多种语言</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">📺</div>
-                    <h3>YouTube字幕</h3>
-                    <p>获取YouTube视频字幕，保存为笔记，学习资料轻松整理</p>
+                <div class="card-grid">
+                    <article class="info-card reveal">
+                        <span class="card-number">01</span>
+                        <h3>High-quality recording</h3>
+                        <p>Record conversations and ideas with a simple mobile interface designed for quick capture.</p>
+                    </article>
+                    <article class="info-card reveal">
+                        <span class="card-number">02</span>
+                        <h3>Transcription options</h3>
+                        <p>Use Apple speech recognition for privacy-sensitive moments or AI transcription for higher flexibility when enabled.</p>
+                    </article>
+                    <article class="info-card reveal">
+                        <span class="card-number">03</span>
+                        <h3>Audio import</h3>
+                        <p>Bring existing audio into the workflow and convert it into readable notes for later review.</p>
+                    </article>
+                    <article class="info-card reveal">
+                        <span class="card-number">04</span>
+                        <h3>Searchable notes</h3>
+                        <p>Keep transcripts, summaries, and related notes organized so voice capture becomes reusable knowledge.</p>
+                    </article>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Screenshots Section -->
-    <section id="screenshots" class="screenshots">
-        <div class="container">
-            <h2 class="section-title">应用截图</h2>
-            <p class="section-subtitle">简洁优雅的界面设计</p>
-            <div class="screenshots-carousel">
-                <div class="screenshot-container">
-                    <div class="screenshot-item active">
-                        <img src="images/screenshot1.png" alt="转写进度">
-                        <p class="screenshot-caption">转写进度实时显示</p>
-                    </div>
-                    <div class="screenshot-item">
-                        <img src="images/screenshot2.png" alt="录音界面">
-                        <p class="screenshot-caption">简洁的录音界面</p>
-                    </div>
-                    <div class="screenshot-item">
-                        <img src="images/screenshot3.png" alt="文件选择">
-                        <p class="screenshot-caption">便捷的文件导入</p>
-                    </div>
-                    <div class="screenshot-item">
-                        <img src="images/screenshot4.png" alt="YouTube字幕">
-                        <p class="screenshot-caption">YouTube字幕提取</p>
+        <section id="screenshots" class="section product-preview">
+            <div class="container preview-grid">
+                <div class="section-heading left reveal">
+                    <p class="eyebrow">Product preview</p>
+                    <h2>Real app screens, presented with more breathing room.</h2>
+                    <p>The product already has strong visual evidence. The website now treats those screenshots as product proof instead of decoration.</p>
+                    <div class="carousel-controls" aria-label="Screenshot controls">
+                        <button class="carousel-btn" type="button" data-direction="previous" aria-label="Previous screenshot">Prev</button>
+                        <button class="carousel-btn" type="button" data-direction="next" aria-label="Next screenshot">Next</button>
                     </div>
                 </div>
-                <div class="screenshot-dots">
-                    <span class="dot active" data-slide="0"></span>
-                    <span class="dot" data-slide="1"></span>
-                    <span class="dot" data-slide="2"></span>
-                    <span class="dot" data-slide="3"></span>
+                <div class="screenshot-stage reveal" aria-live="polite">
+                    <figure class="screenshot-item is-active">
+                        <img src="images/screenshot1.png" alt="Transcription progress screen">
+                        <figcaption>Transcription progress</figcaption>
+                    </figure>
+                    <figure class="screenshot-item">
+                        <img src="images/screenshot2.png" alt="Recording screen">
+                        <figcaption>Recording interface</figcaption>
+                    </figure>
+                    <figure class="screenshot-item">
+                        <img src="images/screenshot3.png" alt="Audio file import screen">
+                        <figcaption>Audio import</figcaption>
+                    </figure>
+                    <figure class="screenshot-item">
+                        <img src="images/screenshot4.png" alt="YouTube caption extraction screen">
+                        <figcaption>YouTube caption workflow</figcaption>
+                    </figure>
+                    <div class="screenshot-dots" aria-label="Screenshot pagination">
+                        <button type="button" class="dot is-active" data-slide="0" aria-label="Show transcription progress"></button>
+                        <button type="button" class="dot" data-slide="1" aria-label="Show recording screen"></button>
+                        <button type="button" class="dot" data-slide="2" aria-label="Show audio import"></button>
+                        <button type="button" class="dot" data-slide="3" aria-label="Show YouTube workflow"></button>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Use Cases Section -->
-    <section id="use-cases" class="use-cases">
-        <div class="container">
-            <h2 class="section-title">使用场景</h2>
-            <p class="section-subtitle">满足您的各种需求</p>
-            <div class="use-cases-grid">
-                <div class="use-case-card">
-                    <div class="use-case-icon">💼</div>
-                    <h3>商务会议</h3>
-                    <p>快速记录会议要点，自动生成会议纪要，提高工作效率</p>
+        <section id="workflow" class="section workflow">
+            <div class="container">
+                <div class="section-heading reveal">
+                    <p class="eyebrow">Use cases</p>
+                    <h2>Designed for repeatable capture moments.</h2>
                 </div>
-                <div class="use-case-card">
-                    <div class="use-case-icon">📚</div>
-                    <h3>课堂学习</h3>
-                    <p>录制讲座内容，整理学习笔记，知识管理更轻松</p>
-                </div>
-                <div class="use-case-card">
-                    <div class="use-case-icon">🎧</div>
-                    <h3>音频学习</h3>
-                    <p>转写音频教程，制作学习资料，随时随地复习</p>
-                </div>
-                <div class="use-case-card">
-                    <div class="use-case-icon">💡</div>
-                    <h3>创意灵感</h3>
-                    <p>随时记录想法，整理成文字，让灵感不再流失</p>
-                </div>
-                <div class="use-case-card">
-                    <div class="use-case-icon">🎤</div>
-                    <h3>采访记录</h3>
-                    <p>录音转文字，提高采访效率，专注交流本身</p>
-                </div>
-                <div class="use-case-card">
-                    <div class="use-case-icon">📖</div>
-                    <h3>个人日记</h3>
-                    <p>语音记录生活，自动转成文字，构建个人知识库</p>
+                <div class="workflow-grid">
+                    <article class="workflow-card reveal">
+                        <h3>Meetings</h3>
+                        <p>Capture discussions and turn them into reviewable text so follow-ups are easier to track.</p>
+                    </article>
+                    <article class="workflow-card reveal">
+                        <h3>Study</h3>
+                        <p>Record lectures or study audio and convert the material into notes for later search and review.</p>
+                    </article>
+                    <article class="workflow-card reveal">
+                        <h3>Interviews</h3>
+                        <p>Preserve interviews in audio form while creating transcripts that are easier to edit and reference.</p>
+                    </article>
+                    <article class="workflow-card reveal">
+                        <h3>Ideas</h3>
+                        <p>Capture thoughts while moving, then organize them into structured notes when there is time.</p>
+                    </article>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- CTA Section -->
-    <section id="download" class="cta">
-        <div class="container">
-            <div class="cta-content">
-                <h2>立即开始您的智能记录之旅</h2>
-                <p>下载AI录音笔记，让每一个声音都变成有价值的文字</p>
-                <div class="cta-buttons">
-                    <a href="https://apps.apple.com" class="btn btn-primary btn-large">
-                        <svg class="icon" viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/>
-                        </svg>
-                        App Store
-                    </a>
-                    <div class="download-qr">
-                        <div class="qr-placeholder">
-                            <span>扫码下载</span>
-                        </div>
-                    </div>
+        <section class="section trust">
+            <div class="container trust-panel reveal">
+                <div>
+                    <p class="eyebrow">Privacy posture</p>
+                    <h2>Clear choices for local and AI-assisted transcription.</h2>
                 </div>
-                <div class="app-features-summary">
-                    <span>✓ 基础功能免费</span>
-                    <span>✓ 无限制录音</span>
-                    <span>✓ 隐私保护</span>
-                    <span>✓ 多语言支持</span>
+                <p>
+                    The product messaging now states the important tradeoff directly: local Apple speech recognition can be used for privacy-sensitive capture, while AI transcription can be used when the user chooses that path.
+                </p>
+                <a href="privacy.html" class="text-link">Read privacy policy</a>
+            </div>
+        </section>
+
+        <section id="support" class="download">
+            <div class="container support-card reveal">
+                <p class="eyebrow">Availability and support</p>
+                <h2>AI Voice Notes is part of the WeiProduct app portfolio.</h2>
+                <p>For App Store availability, support, or product feedback, contact WeiProduct directly.</p>
+                <div class="hero-actions center">
+                    <a href="mailto:1597498880weiproduct@gmail.com" class="btn btn-primary">Contact WeiProduct</a>
+                    <a href="https://github.com/WeiProduct/recording" class="btn btn-secondary">View repository</a>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+    </main>
 
-    <!-- Footer -->
     <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-brand">
-                    <div class="app-icon">🎙️</div>
-                    <span class="app-name">AI录音笔记</span>
-                </div>
-                <div class="footer-links">
-                    <a href="privacy.html">隐私政策</a>
-                    <a href="terms.html">使用条款</a>
-                    <a href="support.html">技术支持</a>
-                    <a href="mailto:support@aivoicenotes.com">联系我们</a>
-                </div>
-                <div class="footer-social">
-                    <a href="#" aria-label="Twitter">𝕏</a>
-                    <a href="#" aria-label="WeChat">微信</a>
-                    <a href="#" aria-label="Email">📧</a>
-                </div>
+        <div class="container footer-grid">
+            <div>
+                <a class="brand footer-brand" href="#top">
+                    <img src="images/ai-voice-notes.png" alt="" width="32" height="32">
+                    <span>AI Voice Notes</span>
+                </a>
+                <p>Voice capture for meetings, study, quick thoughts, and personal notes.</p>
             </div>
-            <div class="footer-bottom">
-                <p>&copy; 2025 AI录音笔记. All rights reserved.</p>
+            <div>
+                <h3>Product</h3>
+                <a href="#capabilities">Capabilities</a>
+                <a href="#screenshots">Screenshots</a>
+                <a href="#workflow">Use cases</a>
             </div>
+            <div>
+                <h3>Company</h3>
+                <a href="https://weiproduct.com">WeiProduct</a>
+                <a href="privacy.html">Privacy</a>
+                <a href="terms.html">Terms</a>
+            </div>
+            <div>
+                <h3>Support</h3>
+                <a href="support.html">Support page</a>
+                <a href="mailto:1597498880weiproduct@gmail.com">Email</a>
+            </div>
+        </div>
+        <div class="container footer-bottom">
+            <p>&copy; 2026 WeiProduct. All rights reserved.</p>
         </div>
     </footer>
 
