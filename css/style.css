@@ -125,10 +125,10 @@ a:focus-visible, button:focus-visible, summary:focus-visible {
 
 /* Hero device widget: voice -> note */
 .hero-visual { position: relative; display: flex; justify-content: center; }
-.device { position: relative; width: 300px; max-width: 78vw; background: var(--card); border: 1px solid var(--border-color); border-radius: 40px; padding: 16px 14px 18px; box-shadow: var(--shadow-lg); }
+.device { position: relative; width: 300px; max-width: 78vw; aspect-ratio: 9 / 19.5; display: flex; flex-direction: column; overflow: hidden; background: var(--card); border: 1px solid var(--border-color); border-radius: 40px; padding: 16px 14px 18px; box-shadow: var(--shadow-lg); }
 .device-notch { position: absolute; top: 12px; left: 50%; transform: translateX(-50%); width: 90px; height: 22px; background: var(--text-primary); opacity: .9; border-radius: 999px; }
 :root[data-theme="dark"] .device-notch { background: #000; opacity: 1; }
-.rec { margin-top: 30px; padding: 4px 8px 4px; }
+.rec { flex: 1; min-height: 0; display: flex; flex-direction: column; margin-top: 30px; padding: 4px 8px 4px; }
 .rec-head { display: flex; align-items: center; justify-content: space-between; padding: 4px 4px 6px; }
 .rec-title { font-weight: 800; font-size: 19px; }
 .rec-live { display: inline-flex; align-items: center; gap: 6px; font-size: 12px; font-weight: 700; color: #e0245e; }
@@ -147,7 +147,7 @@ a:focus-visible, button:focus-visible, summary:focus-visible {
 .src { flex: 1; display: inline-flex; align-items: center; justify-content: center; gap: 5px; font-size: 11.5px; font-weight: 600; padding: 8px 4px; border-radius: 11px; background: var(--bg-secondary); color: var(--text-secondary); border: 1px solid var(--border-color); }
 .src.on { background: var(--chip-bg); color: var(--primary-color); border-color: transparent; }
 
-.note { background: var(--bg-secondary); border: 1px solid var(--border-color); border-radius: 16px; padding: 13px 14px 15px; }
+.note { flex: 1; min-height: 0; background: var(--bg-secondary); border: 1px solid var(--border-color); border-radius: 16px; padding: 13px 14px 15px; }
 .note-top { display: flex; align-items: center; gap: 8px; margin-bottom: 10px; font-size: 12px; font-weight: 700; color: var(--text-secondary); }
 .note-badge { font-size: 10px; font-weight: 800; color: #fff; background: var(--grad); padding: 3px 8px; border-radius: 7px; letter-spacing: .03em; }
 .note .ln { font-size: 12.5px; line-height: 1.5; color: var(--text-primary); font-weight: 500; padding-left: 14px; position: relative; margin-bottom: 6px; animation: lnIn .6s cubic-bezier(.2,.8,.25,1) backwards; }
