@@ -1,251 +1,321 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en" data-theme="light">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI Voice Notes - WeiProduct</title>
-    <meta name="description" content="AI Voice Notes is a WeiProduct app for recording, importing, transcribing, and organizing spoken information into useful notes.">
-    <meta name="theme-color" content="#1769ff">
+    <meta name="theme-color" content="#1769ff" id="themeColorMeta">
+    <meta name="robots" content="index, follow">
+    <title>AI Voice Notes - Record, Transcribe &amp; Organize | AI 语音笔记</title>
+    <meta name="description" content="AI Voice Notes records conversations, imports audio, transcribes YouTube links, and turns speech into clean, searchable notes on iOS. Apple on-device or AI transcription. AI 语音笔记：录音、导入、YouTube 转文字，一键生成可搜索笔记。">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="WeiProduct">
-    <meta property="og:title" content="AI Voice Notes - WeiProduct">
-    <meta property="og:description" content="Record conversations, transcribe audio, import files, and organize voice-based notes.">
+    <meta property="og:title" content="AI Voice Notes | AI 语音笔记">
+    <meta property="og:description" content="Record, import, or paste a YouTube link — then let AI turn speech into clean, searchable notes.">
     <meta property="og:url" content="https://weiproduct.github.io/recording/">
-    <meta property="og:image" content="https://weiproduct.github.io/recording/images/ai-voice-notes.png">
-    <meta name="twitter:card" content="summary">
-    <meta name="twitter:title" content="AI Voice Notes - WeiProduct">
-    <meta name="twitter:description" content="Voice capture, transcription, and note organization by WeiProduct.">
+    <meta property="og:image" content="https://weiproduct.github.io/recording/images/screenshot4.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="AI Voice Notes | AI 语音笔记">
+    <meta name="twitter:description" content="Record, import audio, or transcribe a YouTube link into clean, searchable notes on iOS.">
+    <meta name="twitter:image" content="https://weiproduct.github.io/recording/images/screenshot4.png">
     <link rel="canonical" href="https://weiproduct.github.io/recording/">
-    <link rel="icon" href="images/ai-voice-notes.png" type="image/png">
-    <link rel="apple-touch-icon" href="images/ai-voice-notes.png">
+    <link rel="alternate" hreflang="zh-CN" href="https://weiproduct.github.io/recording/">
+    <link rel="alternate" hreflang="en" href="https://weiproduct.github.io/recording/">
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%231769ff'/%3E%3Cstop offset='1' stop-color='%2305a6c8'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='100' height='100' rx='24' fill='url(%23g)'/%3E%3Crect x='40' y='22' width='20' height='36' rx='10' fill='white'/%3E%3Cpath d='M30 50a20 20 0 0 0 40 0' fill='none' stroke='white' stroke-width='5' stroke-linecap='round'/%3E%3Cpath d='M50 70v10M40 80h20' stroke='white' stroke-width='5' stroke-linecap='round'/%3E%3C/svg%3E">
+    <link rel="apple-touch-icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%231769ff'/%3E%3Cstop offset='1' stop-color='%2305a6c8'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='100' height='100' rx='24' fill='url(%23g)'/%3E%3Crect x='40' y='22' width='20' height='36' rx='10' fill='white'/%3E%3Cpath d='M30 50a20 20 0 0 0 40 0' fill='none' stroke='white' stroke-width='5' stroke-linecap='round'/%3E%3Cpath d='M50 70v10M40 80h20' stroke='white' stroke-width='5' stroke-linecap='round'/%3E%3C/svg%3E">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
     <script type="application/ld+json">
     {
-        "@context": "https://schema.org",
-        "@type": "SoftwareApplication",
-        "name": "AI Voice Notes",
-        "applicationCategory": "ProductivityApplication",
-        "operatingSystem": "iOS",
-        "url": "https://weiproduct.github.io/recording/",
-        "downloadUrl": "https://apps.apple.com/app/id6748947046",
-        "image": "https://weiproduct.github.io/recording/images/ai-voice-notes.png",
-        "description": "AI-assisted voice recording, transcription, import, and note organization for meetings, study, interviews, and daily capture.",
-        "creator": {
-            "@type": "Organization",
-            "name": "WeiProduct",
-            "url": "https://weiproduct.com"
-        },
-        "offers": {
-            "@type": "Offer",
-            "price": "0",
-            "priceCurrency": "USD"
-        }
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "AI Voice Notes",
+      "alternateName": "AI 语音笔记",
+      "applicationCategory": "ProductivityApplication",
+      "operatingSystem": "iOS",
+      "url": "https://weiproduct.github.io/recording/",
+      "image": "https://weiproduct.github.io/recording/images/screenshot4.png",
+      "downloadUrl": "https://apps.apple.com/app/id6748947046",
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+      "publisher": { "@type": "Organization", "name": "WeiProduct", "url": "https://weiproduct.com/" },
+      "description": "AI Voice Notes records conversations, imports audio files, transcribes YouTube links, and organizes speech into clean, searchable notes on iOS, with Apple on-device or AI transcription."
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        { "@type": "Question", "name": "How does AI Voice Notes turn speech into notes?", "acceptedAnswer": { "@type": "Answer", "text": "Capture audio by recording live, importing an existing file, or pasting a YouTube link. The app then transcribes it with Apple's on-device speech recognition or AI transcription, and saves a clean, searchable note." } },
+        { "@type": "Question", "name": "Can it transcribe a YouTube video?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Paste a YouTube link and the app downloads the audio, then queues it for transcription so you get the full text as a note." } },
+        { "@type": "Question", "name": "Is my audio private?", "acceptedAnswer": { "@type": "Answer", "text": "You choose the engine. Apple on-device speech recognition keeps privacy-sensitive audio on your iPhone, while AI transcription is available when you opt into it." } },
+        { "@type": "Question", "name": "Can I import audio I already recorded?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Import existing audio from the Files app and convert it into a readable, searchable transcript." } },
+        { "@type": "Question", "name": "What languages does it support and how much does it cost?", "acceptedAnswer": { "@type": "Answer", "text": "The interface supports English and Simplified Chinese, and the app is free to download on the App Store." } }
+      ]
     }
     </script>
 </head>
 <body>
-    <nav class="navbar" aria-label="Primary navigation">
-        <div class="container nav-shell">
-            <a class="brand" href="#top" aria-label="AI Voice Notes home">
-                <img src="images/ai-voice-notes.png" alt="" width="36" height="36">
-                <span>AI Voice Notes</span>
+    <a class="skip-link" href="#main" data-i18n="skip">Skip to content</a>
+
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <a class="nav-brand" href="#" aria-label="AI Voice Notes">
+                <span class="brand-icon" aria-hidden="true">
+                    <svg viewBox="0 0 100 100" width="34" height="34"><defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#1769ff"/><stop offset="1" stop-color="#05a6c8"/></linearGradient></defs><rect width="100" height="100" rx="24" fill="url(#bg)"/><rect x="40" y="22" width="20" height="36" rx="10" fill="#fff"/><path d="M30 50a20 20 0 0 0 40 0" fill="none" stroke="#fff" stroke-width="5" stroke-linecap="round"/><path d="M50 70v10M40 80h20" stroke="#fff" stroke-width="5" stroke-linecap="round"/></svg>
+                </span>
+                <span class="brand-name">AI Voice Notes</span>
             </a>
-            <div class="nav-menu" id="nav-menu">
-                <a href="#capabilities">Capabilities</a>
-                <a href="#screenshots">Product</a>
-                <a href="#workflow">Workflow</a>
-                <a href="https://apps.apple.com/app/id6748947046" class="nav-cta" target="_blank" rel="noopener noreferrer">App Store</a>
+            <div class="nav-menu">
+                <a href="#how" class="nav-link" data-i18n="navHow">How it works</a>
+                <a href="#features" class="nav-link" data-i18n="navFeatures">Features</a>
+                <a href="#screenshots" class="nav-link" data-i18n="navScreenshots">Screenshots</a>
+                <a href="#faq" class="nav-link" data-i18n="navFaq">FAQ</a>
+                <button class="icon-btn" type="button" id="themeToggle" aria-label="Toggle dark mode">
+                    <svg class="i-sun" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4.5"/><path d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M19.1 4.9l-1.8 1.8M6.7 17.3l-1.8 1.8"/></svg>
+                    <svg class="i-moon" viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M21 12.8A8.5 8.5 0 1 1 11.2 3a6.6 6.6 0 0 0 9.8 9.8z"/></svg>
+                </button>
+                <button class="lang-switch" type="button" id="langSwitch" aria-label="Switch language">中文</button>
+                <a href="https://apps.apple.com/app/id6748947046" class="btn btn-primary btn-sm nav-cta" target="_blank" rel="noopener noreferrer" data-i18n="navGet">Get App</a>
             </div>
-            <button class="nav-toggle" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="nav-menu">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
         </div>
     </nav>
 
-    <main id="top">
-        <section class="hero">
-            <div class="container hero-grid">
-                <div class="hero-copy reveal">
-                    <p class="eyebrow">WeiProduct voice productivity</p>
-                    <h1>Turn spoken information into organized notes.</h1>
-                    <p class="hero-subtitle">
-                        AI Voice Notes helps users record conversations, import audio, transcribe speech, and keep the resulting text searchable. It is built for meetings, study, interviews, and fast idea capture.
-                    </p>
-                    <div class="hero-actions">
-                        <a href="https://apps.apple.com/app/id6748947046" class="btn btn-primary" target="_blank" rel="noopener noreferrer">Download on the App Store</a>
-                        <a href="#screenshots" class="btn btn-secondary">View product flow</a>
-                    </div>
-                    <div class="capability-strip" aria-label="Product capability summary">
-                        <span>Record</span>
-                        <span>Transcribe</span>
-                        <span>Organize</span>
+    <main id="main">
+    <section class="hero">
+        <div class="hero-bg" aria-hidden="true"></div>
+        <div class="container">
+            <div class="hero-content">
+                <span class="eyebrow" data-i18n="heroEyebrow">✦ Voice-to-note, powered by AI</span>
+                <h1 class="hero-title" data-i18n="heroTitle">Turn any voice into organized notes.</h1>
+                <p class="hero-subtitle" data-i18n="heroSubtitle">Record a conversation, import an audio file, or paste a YouTube link — AI Voice Notes transcribes it and keeps every word searchable.</p>
+                <div class="hero-buttons">
+                    <a href="https://apps.apple.com/app/id6748947046" class="store-badge" target="_blank" rel="noopener noreferrer" aria-label="Download on the App Store">
+                        <svg viewBox="0 0 120 40" width="150" height="50" role="img" aria-hidden="true">
+                            <rect x="0.5" y="0.5" width="119" height="39" rx="8" fill="#000" stroke="#A6A6A6" stroke-opacity="0.4"/>
+                            <g transform="translate(11,8.5) scale(0.95)"><path fill="#fff" d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></g>
+                            <text x="34" y="16" fill="#fff" font-family="-apple-system, Helvetica, Arial, sans-serif" font-size="6.5">Download on the</text>
+                            <text x="33.5" y="31" fill="#fff" font-family="-apple-system, Helvetica, Arial, sans-serif" font-size="16" font-weight="600">App Store</text>
+                        </svg>
+                    </a>
+                    <a href="#how" class="btn btn-secondary" data-i18n="learnMore">See how it works</a>
+                </div>
+                <ul class="hero-trust">
+                    <li data-i18n="trust1">🎙️ Record or import</li>
+                    <li data-i18n="trust2">▶ YouTube → text</li>
+                    <li data-i18n="trust3">🌏 EN / 中文</li>
+                </ul>
+            </div>
+            <div class="hero-visual">
+                <div class="device" role="img" aria-label="AI Voice Notes transcribing recorded speech into a note">
+                    <div class="device-notch" aria-hidden="true"></div>
+                    <div class="rec">
+                        <div class="rec-head">
+                            <span class="rec-title" data-i18n="recTitle">Recording</span>
+                            <span class="rec-live"><span class="dot"></span><span data-i18n="recLive">Live</span></span>
+                        </div>
+                        <div class="wave" aria-hidden="true">
+                            <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+                        </div>
+                        <div class="rec-time" aria-hidden="true">00:14</div>
+                        <div class="src-row">
+                            <span class="src on"><svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="2.5" width="6" height="11" rx="3"/><path d="M6 11a6 6 0 0 0 12 0M12 17v3.5"/></svg><span data-i18n="srcMic">Mic</span></span>
+                            <span class="src"><svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 15V4M8 8l4-4 4 4"/><path d="M4 15v3a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-3"/></svg><span data-i18n="srcImport">Import</span></span>
+                            <span class="src"><svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="6" width="18" height="12" rx="4"/><path d="M11 9.5l4 2.5-4 2.5z" fill="currentColor" stroke="none"/></svg><span data-i18n="srcYt">YouTube</span></span>
+                        </div>
+                        <div class="note">
+                            <div class="note-top"><span class="note-badge">AI</span><span data-i18n="noteLabel">Transcript &amp; summary</span></div>
+                            <p class="ln l1" data-i18n="noteL1">Kickoff call — align on Q3 goals and owners.</p>
+                            <p class="ln l2" data-i18n="noteL2">Ship the beta by the 20th; Wei owns QA.</p>
+                            <p class="ln l3" data-i18n="noteL3">Follow up on pricing after the review.</p>
+                        </div>
                     </div>
                 </div>
-                <div class="hero-device reveal">
-                    <div class="device-frame">
-                        <img src="images/screenshot2.png" alt="AI Voice Notes recording screen">
-                    </div>
+                <div class="hero-chip chip-a" data-i18n="chipA">🖊️ Speech → text</div>
+                <div class="hero-chip chip-b" data-i18n="chipB">🔍 Searchable notes</div>
+            </div>
+        </div>
+    </section>
+
+    <section class="proof" aria-label="highlights">
+        <div class="container proof-row">
+            <div class="proof-rating">
+                <div class="stars" aria-hidden="true">★★★★★</div>
+                <div class="proof-sub"><strong>App Store</strong><span data-i18n="proofRating">Productivity · Utilities</span></div>
+            </div>
+            <div class="proof-stats">
+                <div class="stat"><strong>Apple + AI</strong><span data-i18n="stat1">Transcription</span></div>
+                <div class="stat"><strong>YouTube</strong><span data-i18n="stat2">Link → text</span></div>
+                <div class="stat"><strong>EN / 中文</strong><span data-i18n="stat3">Bilingual</span></div>
+                <div class="stat"><strong>0</strong><span data-i18n="stat4">Ads · Tracking</span></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="how" class="how">
+        <div class="container">
+            <h2 class="section-title" data-i18n="howTitle">From voice to note in three steps</h2>
+            <p class="section-sub" data-i18n="howSub">Capture the audio — the app handles the words.</p>
+            <div class="steps">
+                <div class="step reveal">
+                    <div class="step-badge">1</div>
+                    <div class="step-ic" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="2" width="6" height="12" rx="3"/><path d="M5 11a7 7 0 0 0 14 0M12 18v3"/></svg></div>
+                    <h3 data-i18n="step1Title">Capture</h3>
+                    <p data-i18n="step1Desc">Record live, import an existing audio file, or paste a YouTube link — whatever you need to keep.</p>
+                </div>
+                <div class="step reveal">
+                    <div class="step-badge">2</div>
+                    <div class="step-ic" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h16M4 10h10M4 15h16M4 20h7"/></svg></div>
+                    <h3 data-i18n="step2Title">Transcribe</h3>
+                    <p data-i18n="step2Desc">Convert speech to text with Apple's on-device recognition, or switch to AI transcription for more flexibility.</p>
+                </div>
+                <div class="step reveal">
+                    <div class="step-badge">3</div>
+                    <div class="step-ic" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h9l4 4v14a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1z"/><path d="M14 3v5h5M9 13h6M9 17h4"/></svg></div>
+                    <h3 data-i18n="step3Title">Organize</h3>
+                    <p data-i18n="step3Desc">Save a clean, searchable note you can review, edit, and reuse for meetings, study, and ideas.</p>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <section id="capabilities" class="section capabilities">
-            <div class="container">
-                <div class="section-heading reveal">
-                    <p class="eyebrow">Capabilities</p>
-                    <h2>A practical voice-to-note workflow.</h2>
-                    <p>Instead of selling abstract AI, the product focuses on the recurring user job: capture audio, convert it to text, and keep the result useful.</p>
+    <section id="features" class="features">
+        <div class="container">
+            <h2 class="section-title" data-i18n="featuresTitle">Everything for capturing spoken info</h2>
+            <p class="section-sub" data-i18n="featuresSub">Purpose-built for the real job: get audio, get text, keep it useful.</p>
+            <div class="features-grid">
+                <div class="feature-card reveal">
+                    <div class="feature-icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="2" width="6" height="12" rx="3"/><path d="M5 11a7 7 0 0 0 14 0M12 18v3M8 21h8"/></svg></div>
+                    <h3 data-i18n="feature1Title">One-tap recording</h3>
+                    <p data-i18n="feature1Desc">A clean recorder with a live timer captures conversations and ideas the moment they happen.</p>
                 </div>
-                <div class="card-grid">
-                    <article class="info-card reveal">
-                        <span class="card-number">01</span>
-                        <h3>High-quality recording</h3>
-                        <p>Record conversations and ideas with a simple mobile interface designed for quick capture.</p>
-                    </article>
-                    <article class="info-card reveal">
-                        <span class="card-number">02</span>
-                        <h3>Transcription options</h3>
-                        <p>Use Apple speech recognition for privacy-sensitive moments or AI transcription for higher flexibility when enabled.</p>
-                    </article>
-                    <article class="info-card reveal">
-                        <span class="card-number">03</span>
-                        <h3>Audio import</h3>
-                        <p>Bring existing audio into the workflow and convert it into readable notes for later review.</p>
-                    </article>
-                    <article class="info-card reveal">
-                        <span class="card-number">04</span>
-                        <h3>Searchable notes</h3>
-                        <p>Keep transcripts, summaries, and related notes organized so voice capture becomes reusable knowledge.</p>
-                    </article>
+                <div class="feature-card reveal">
+                    <div class="feature-icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7l3-3 3 3M6 4v9a3 3 0 0 0 3 3h5"/><path d="M21 17l-3 3-3-3M18 20v-9a3 3 0 0 0-3-3h-5"/></svg></div>
+                    <h3 data-i18n="feature2Title">Two transcription engines</h3>
+                    <p data-i18n="feature2Desc">Pick Apple's on-device speech recognition for privacy, or AI transcription when you want more flexibility.</p>
+                </div>
+                <div class="feature-card reveal">
+                    <div class="feature-icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 15V4M8 8l4-4 4 4"/><path d="M4 15v3a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-3"/></svg></div>
+                    <h3 data-i18n="feature3Title">Import any audio</h3>
+                    <p data-i18n="feature3Desc">Bring existing recordings in from the Files app and turn them into readable notes for later review.</p>
+                </div>
+                <div class="feature-card reveal">
+                    <div class="feature-icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="2.5" y="5" width="19" height="14" rx="4"/><path d="M10.5 9l4.5 3-4.5 3z" fill="currentColor" stroke="none"/></svg></div>
+                    <h3 data-i18n="feature4Title">YouTube to text</h3>
+                    <p data-i18n="feature4Desc">Paste a YouTube link — the app downloads the audio and transcribes it into a full, searchable note.</p>
+                </div>
+                <div class="feature-card reveal">
+                    <div class="feature-icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/><path d="M8 10h6M8 13h4"/></svg></div>
+                    <h3 data-i18n="feature5Title">Searchable notes</h3>
+                    <p data-i18n="feature5Desc">Transcripts, summaries, and imports stay organized so voice capture becomes reusable knowledge.</p>
+                </div>
+                <div class="feature-card reveal">
+                    <div class="feature-icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.5l7 3v5c0 4.4-3 8.3-7 9.5-4-1.2-7-5.1-7-9.5v-5z"/><path d="M9 12l2 2 4-4"/></svg></div>
+                    <h3 data-i18n="feature6Title">Privacy you control</h3>
+                    <p data-i18n="feature6Desc">Choose on-device transcription for sensitive moments so your audio never has to leave the phone.</p>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <section id="screenshots" class="section product-preview">
-            <div class="container preview-grid">
-                <div class="section-heading left reveal">
-                    <p class="eyebrow">Product preview</p>
-                    <h2>Real app screens, presented with more breathing room.</h2>
-                    <p>The product already has strong visual evidence. The website now treats those screenshots as product proof instead of decoration.</p>
-                    <div class="carousel-controls" aria-label="Screenshot controls">
-                        <button class="carousel-btn" type="button" data-direction="previous" aria-label="Previous screenshot">Prev</button>
-                        <button class="carousel-btn" type="button" data-direction="next" aria-label="Next screenshot">Next</button>
-                    </div>
-                </div>
-                <div class="screenshot-stage reveal" aria-live="polite">
-                    <figure class="screenshot-item is-active">
-                        <img src="images/screenshot1.png" alt="Transcription progress screen">
-                        <figcaption>Transcription progress</figcaption>
+    <section id="screenshots" class="screenshots">
+        <div class="container">
+            <h2 class="section-title" data-i18n="screenshotsTitle">See it in the app</h2>
+            <p class="section-sub" data-i18n="screenshotsSub">Swipe through — tap any shot to zoom in.</p>
+            <div class="gallery">
+                <button class="gal-arrow prev" type="button" aria-label="Previous" id="galPrev">‹</button>
+                <div class="gal-track" id="galTrack">
+                    <figure class="shot reveal">
+                        <div class="phone"><img src="images/screenshot2.png" alt="One-tap recording screen with live timer" width="1290" height="2796" loading="lazy" decoding="async"></div>
+                        <figcaption data-i18n="shot1">One-tap recording</figcaption>
                     </figure>
-                    <figure class="screenshot-item">
-                        <img src="images/screenshot2.png" alt="Recording screen">
-                        <figcaption>Recording interface</figcaption>
+                    <figure class="shot reveal">
+                        <div class="phone"><img src="images/screenshot1.png" alt="Live transcription queue" width="1290" height="2796" loading="lazy" decoding="async"></div>
+                        <figcaption data-i18n="shot2">Live transcription queue</figcaption>
                     </figure>
-                    <figure class="screenshot-item">
-                        <img src="images/screenshot3.png" alt="Audio file import screen">
-                        <figcaption>Audio import</figcaption>
+                    <figure class="shot reveal">
+                        <div class="phone"><img src="images/screenshot3.png" alt="Import an audio file from Files" width="1290" height="2796" loading="lazy" decoding="async"></div>
+                        <figcaption data-i18n="shot3">Import any audio file</figcaption>
                     </figure>
-                    <figure class="screenshot-item">
-                        <img src="images/screenshot4.png" alt="YouTube caption extraction screen">
-                        <figcaption>YouTube caption workflow</figcaption>
+                    <figure class="shot reveal">
+                        <div class="phone"><img src="images/screenshot4.png" alt="YouTube audio downloaded, ready to transcribe" width="1290" height="2796" loading="lazy" decoding="async"></div>
+                        <figcaption data-i18n="shot4">YouTube link → transcript</figcaption>
                     </figure>
-                    <div class="screenshot-dots" aria-label="Screenshot pagination">
-                        <button type="button" class="dot is-active" data-slide="0" aria-label="Show transcription progress"></button>
-                        <button type="button" class="dot" data-slide="1" aria-label="Show recording screen"></button>
-                        <button type="button" class="dot" data-slide="2" aria-label="Show audio import"></button>
-                        <button type="button" class="dot" data-slide="3" aria-label="Show YouTube workflow"></button>
-                    </div>
                 </div>
+                <button class="gal-arrow next" type="button" aria-label="Next" id="galNext">›</button>
             </div>
-        </section>
+            <div class="gal-dots" id="galDots" aria-hidden="true"></div>
+        </div>
+    </section>
 
-        <section id="workflow" class="section workflow">
-            <div class="container">
-                <div class="section-heading reveal">
-                    <p class="eyebrow">Use cases</p>
-                    <h2>Designed for repeatable capture moments.</h2>
-                </div>
-                <div class="workflow-grid">
-                    <article class="workflow-card reveal">
-                        <h3>Meetings</h3>
-                        <p>Capture discussions and turn them into reviewable text so follow-ups are easier to track.</p>
-                    </article>
-                    <article class="workflow-card reveal">
-                        <h3>Study</h3>
-                        <p>Record lectures or study audio and convert the material into notes for later search and review.</p>
-                    </article>
-                    <article class="workflow-card reveal">
-                        <h3>Interviews</h3>
-                        <p>Preserve interviews in audio form while creating transcripts that are easier to edit and reference.</p>
-                    </article>
-                    <article class="workflow-card reveal">
-                        <h3>Ideas</h3>
-                        <p>Capture thoughts while moving, then organize them into structured notes when there is time.</p>
-                    </article>
-                </div>
+    <section class="privacy">
+        <div class="container privacy-card">
+            <div class="privacy-lead">
+                <h2 data-i18n="privacyTitle">Your voice, your choice</h2>
+                <p data-i18n="privacyDesc">Keep privacy-sensitive audio on-device with Apple speech recognition, or opt into AI transcription when you want it. The tradeoff is always yours to make.</p>
             </div>
-        </section>
+            <ul class="privacy-points">
+                <li><span aria-hidden="true">📱</span><span data-i18n="pp1">On-device option</span></li>
+                <li><span aria-hidden="true">🎙️</span><span data-i18n="pp2">You pick the engine</span></li>
+                <li><span aria-hidden="true">🚫</span><span data-i18n="pp3">No ads, no tracking</span></li>
+                <li><span aria-hidden="true">🔍</span><span data-i18n="pp4">Everything searchable</span></li>
+            </ul>
+        </div>
+    </section>
 
-        <section class="section trust">
-            <div class="container trust-panel reveal">
-                <div>
-                    <p class="eyebrow">Privacy posture</p>
-                    <h2>Clear choices for local and AI-assisted transcription.</h2>
-                </div>
-                <p>
-                    The product messaging now states the important tradeoff directly: local Apple speech recognition can be used for privacy-sensitive capture, while AI transcription can be used when the user chooses that path.
-                </p>
-                <a href="privacy.html" class="text-link">Read privacy policy</a>
+    <section id="faq" class="faq">
+        <div class="container">
+            <h2 class="section-title" data-i18n="faqTitle">Frequently asked questions</h2>
+            <div class="faq-list">
+                <details class="faq-item reveal"><summary data-i18n="q1">How does AI Voice Notes turn speech into notes?</summary><p data-i18n="a1">Capture audio by recording live, importing a file, or pasting a YouTube link. The app then transcribes it with Apple's on-device recognition or AI transcription and saves a clean, searchable note.</p></details>
+                <details class="faq-item reveal"><summary data-i18n="q2">Can it transcribe a YouTube video?</summary><p data-i18n="a2">Yes. Paste a YouTube link and the app downloads the audio, then queues it for transcription so you get the full text as a note.</p></details>
+                <details class="faq-item reveal"><summary data-i18n="q3">Is my audio private?</summary><p data-i18n="a3">You choose the engine. Apple on-device speech recognition keeps privacy-sensitive audio on your iPhone, while AI transcription is available when you opt into it.</p></details>
+                <details class="faq-item reveal"><summary data-i18n="q4">Can I import audio I already recorded?</summary><p data-i18n="a4">Yes. Import existing audio from the Files app and convert it into a readable, searchable transcript.</p></details>
+                <details class="faq-item reveal"><summary data-i18n="q5">What languages does it support and how much does it cost?</summary><p data-i18n="a5">The interface supports English and Simplified Chinese, and the app is free to download on the App Store.</p></details>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <section id="support" class="download">
-            <div class="container support-card reveal">
-                <p class="eyebrow">Availability and support</p>
-                <h2>AI Voice Notes is part of the WeiProduct app portfolio.</h2>
-                <p>AI Voice Notes is available on the App Store. For support or product feedback, contact WeiProduct directly.</p>
-                <div class="hero-actions center">
-                    <a href="https://apps.apple.com/app/id6748947046" class="btn btn-primary" target="_blank" rel="noopener noreferrer">Download on the App Store</a>
-                    <a href="https://github.com/WeiProduct/recording" class="btn btn-secondary">View repository</a>
+    <section id="download" class="download">
+        <div class="container">
+            <div class="download-content">
+                <h2 data-i18n="downloadTitle">Start capturing every word</h2>
+                <p data-i18n="downloadSubtitle">Record, import, or paste a link — AI Voice Notes does the rest.</p>
+                <div class="download-buttons">
+                    <a href="https://apps.apple.com/app/id6748947046" class="store-badge lg" target="_blank" rel="noopener noreferrer" aria-label="Download on the App Store">
+                        <svg viewBox="0 0 120 40" width="180" height="60" role="img" aria-hidden="true">
+                            <rect x="0.5" y="0.5" width="119" height="39" rx="8" fill="#000" stroke="#ffffff" stroke-opacity="0.35"/>
+                            <g transform="translate(11,8.5) scale(0.95)"><path fill="#fff" d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></g>
+                            <text x="34" y="16" fill="#fff" font-family="-apple-system, Helvetica, Arial, sans-serif" font-size="6.5">Download on the</text>
+                            <text x="33.5" y="31" fill="#fff" font-family="-apple-system, Helvetica, Arial, sans-serif" font-size="16" font-weight="600">App Store</text>
+                        </svg>
+                    </a>
                 </div>
+                <p class="download-note" data-i18n="downloadNote">Free on the App Store · iPhone</p>
             </div>
-        </section>
+        </div>
+    </section>
     </main>
 
     <footer class="footer">
-        <div class="container footer-grid">
-            <div>
-                <a class="brand footer-brand" href="#top">
-                    <img src="images/ai-voice-notes.png" alt="" width="32" height="32">
-                    <span>AI Voice Notes</span>
-                </a>
-                <p>Voice capture for meetings, study, quick thoughts, and personal notes.</p>
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; <span id="currentYear">2026</span> <span data-i18n="footerRights">AI Voice Notes. All rights reserved.</span></p>
+                <p data-i18n="footerMadeBy">Built by WeiProduct</p>
+                <p><a href="privacy.html" data-i18n="footerPrivacy">Privacy</a> · <a href="terms.html" data-i18n="footerTerms">Terms</a> · <a href="support.html" data-i18n="footerSupport">Support</a></p>
+                <p>Contact: <a href="mailto:1597498880weiproduct@gmail.com">1597498880weiproduct@gmail.com</a></p>
             </div>
-            <div>
-                <h3>Product</h3>
-                <a href="#capabilities">Capabilities</a>
-                <a href="#screenshots">Screenshots</a>
-                <a href="#workflow">Use cases</a>
-            </div>
-            <div>
-                <h3>Company</h3>
-                <a href="https://weiproduct.com">WeiProduct</a>
-                <a href="privacy.html">Privacy</a>
-                <a href="terms.html">Terms</a>
-            </div>
-            <div>
-                <h3>Support</h3>
-                <a href="https://apps.apple.com/app/id6748947046" target="_blank" rel="noopener noreferrer">App Store</a>
-                <a href="support.html">Support page</a>
-                <a href="mailto:1597498880weiproduct@gmail.com">Email</a>
-            </div>
-        </div>
-        <div class="container footer-bottom">
-            <p>&copy; 2026 WeiProduct. All rights reserved.</p>
         </div>
     </footer>
+
+    <div class="sticky-cta" id="stickyCta">
+        <div class="sticky-app">
+            <span class="brand-icon sm" aria-hidden="true"><svg viewBox="0 0 100 100" width="30" height="30"><rect width="100" height="100" rx="24" fill="url(#bg)"/><rect x="40" y="22" width="20" height="36" rx="10" fill="#fff"/><path d="M30 50a20 20 0 0 0 40 0" fill="none" stroke="#fff" stroke-width="5" stroke-linecap="round"/><path d="M50 70v10M40 80h20" stroke="#fff" stroke-width="5" stroke-linecap="round"/></svg></span>
+            <div class="sticky-txt"><strong>AI Voice Notes</strong><span data-i18n="stickySub">Voice → notes · Free</span></div>
+        </div>
+        <a href="https://apps.apple.com/app/id6748947046" class="btn btn-primary btn-sm" target="_blank" rel="noopener noreferrer" data-i18n="stickyGet">Get</a>
+    </div>
 
     <script src="js/main.js"></script>
 </body>
