@@ -26,6 +26,7 @@ const I18N = {
     demoEngineApple: 'Apple on-device', demoEngineAi: 'AI transcription',
     demoSearchLabel: 'Try the search',
     demoSearchPh: 'Type a word… e.g. "pricing"',
+    demoResultsHint: 'Matches appear here as you type',
     demoHint: 'Simulated preview — in the app, this is your own audio.',
     step1Title: 'Capture', step1Desc: 'Record live, import an existing audio file, or paste a YouTube link — whatever you need to keep.',
     step2Title: 'Transcribe', step2Desc: 'Convert speech to text with Apple’s on-device recognition, or switch to AI transcription for more flexibility.',
@@ -99,6 +100,7 @@ const I18N = {
     demoEngineApple: 'Apple 本地', demoEngineAi: 'AI 转录',
     demoSearchLabel: '试试搜索',
     demoSearchPh: '输入一个词…例如「定价」',
+    demoResultsHint: '输入后，匹配结果会显示在这里',
     demoHint: '模拟演示——在 App 里，这是你自己的音频。',
     step1Title: '采集', step1Desc: '实时录音、导入已有音频文件，或粘贴一条 YouTube 链接——想留下什么都可以。',
     step2Title: '转录', step2Desc: '用 Apple 本地语音识别把语音转成文字，或切换到 AI 转录以获得更高灵活度。',
@@ -281,6 +283,8 @@ function initDemo() {
   const box = document.getElementById('demoTranscript');
   const input = document.getElementById('demoSearch');
   const countEl = document.getElementById('demoCount');
+  const placeholderEl = document.getElementById('demoPlaceholder');
+  const hitsEl = document.getElementById('demoHits');
   if (!box || !input || !countEl) return;
   const tabs = Array.from(document.querySelectorAll('.demo-tab'));
   const engs = Array.from(document.querySelectorAll('.demo-eng'));
@@ -307,6 +311,29 @@ function initDemo() {
     html += esc(text.slice(last));
     return { html: html, n: n };
   }
+  function buildHits(text, q) {
+    const safe = q.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+    const re = new RegExp(safe, 'gi');
+    const rows = [];
+    let m;
+    while ((m = re.exec(text)) !== null && rows.length < 3) {
+      if (m[0].length === 0) { re.lastIndex++; continue; }
+      const start = Math.max(0, m.index - 16);
+      const end = Math.min(text.length, m.index + m[0].length + 30);
+      rows.push('<div class="demo-hit">' +
+        (start > 0 ? '…' : '') +
+        esc(text.slice(start, m.index)) + '<mark>' + esc(m[0]) + '</mark>' + esc(text.slice(m.index + m[0].length, end)) +
+        (end < text.length ? '…' : '') +
+        '</div>');
+    }
+    return rows.join('');
+  }
+  function setHits(html) {
+    if (!placeholderEl || !hitsEl) return;
+    hitsEl.innerHTML = html;
+    hitsEl.style.display = html ? '' : 'none';
+    placeholderEl.style.display = html ? 'none' : '';
+  }
   function render(animate) {
     if (timer) { clearInterval(timer); timer = null; }
     const text = fullText();
@@ -316,9 +343,11 @@ function initDemo() {
       const r = highlight(text, q);
       box.innerHTML = r.html;
       countEl.textContent = r.n === 0 ? d.none : (r.n === 1 ? d.one : d.matches.replace('{n}', r.n));
+      setHits(r.n > 0 ? buildHits(text, q) : '');
       return;
     }
     countEl.textContent = '';
+    setHits('');
     if (!animate || reduced) { box.textContent = text; return; }
     box.innerHTML = '<span></span><span class="demo-caret"></span>';
     const typed = box.firstChild;
